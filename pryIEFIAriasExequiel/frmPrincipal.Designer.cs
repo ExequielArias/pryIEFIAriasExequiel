@@ -33,6 +33,7 @@
             this.cmdVentas = new System.Windows.Forms.Button();
             this.ptbVentas = new System.Windows.Forms.PictureBox();
             this.ptbProducto = new System.Windows.Forms.PictureBox();
+            this.cmdListado = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ptbVentas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbProducto)).BeginInit();
             this.SuspendLayout();
@@ -85,12 +86,25 @@
             this.ptbProducto.TabIndex = 2;
             this.ptbProducto.TabStop = false;
             // 
+            // cmdListado
+            // 
+            this.cmdListado.BackColor = System.Drawing.Color.Black;
+            this.cmdListado.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdListado.ForeColor = System.Drawing.Color.White;
+            this.cmdListado.Location = new System.Drawing.Point(23, 142);
+            this.cmdListado.Name = "cmdListado";
+            this.cmdListado.Size = new System.Drawing.Size(194, 52);
+            this.cmdListado.TabIndex = 4;
+            this.cmdListado.Text = "Listado";
+            this.cmdListado.UseVisualStyleBackColor = false;
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.ClientSize = new System.Drawing.Size(239, 170);
+            this.ClientSize = new System.Drawing.Size(239, 224);
+            this.Controls.Add(this.cmdListado);
             this.Controls.Add(this.ptbVentas);
             this.Controls.Add(this.ptbProducto);
             this.Controls.Add(this.cmdVentas);
@@ -112,5 +126,6 @@
         private System.Windows.Forms.Button cmdVentas;
         private System.Windows.Forms.PictureBox ptbProducto;
         private System.Windows.Forms.PictureBox ptbVentas;
+        private System.Windows.Forms.Button cmdListado;
     }
 }
