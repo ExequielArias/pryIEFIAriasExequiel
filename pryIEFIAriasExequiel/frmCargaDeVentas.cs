@@ -44,7 +44,7 @@ namespace pryIEFIAriasExequiel
                     dgvProductos.Rows[n].Cells[0].Value = "";
                     dgvProductos.Rows[n].Cells[1].Value = dtpFechaDeVenta.Text;
                     dgvProductos.Rows[n].Cells[2].Value = txtProducto.Text;
-                    dgvProductos.Rows[n].Cells[2].Value = nudCantidad.Text; 
+                    dgvProductos.Rows[n].Cells[3].Value = nudCantidad.Text; 
                 }
             }
             else
