@@ -12,6 +12,8 @@ namespace pryIEFIAriasExequiel
 {
     public partial class frmCargaDeVentas : Form
     {
+        string[,] MatrizProductos = new string[10, 4];
+        int fila = 0;
         public frmCargaDeVentas()
         {
             InitializeComponent();
@@ -40,11 +42,12 @@ namespace pryIEFIAriasExequiel
                 }
                 else
                 {
-                    int n = dgvProductos.Rows.Add();
-                    dgvProductos.Rows[n].Cells[0].Value = "";
-                    dgvProductos.Rows[n].Cells[1].Value = dtpFechaDeVenta.Text;
-                    dgvProductos.Rows[n].Cells[2].Value = txtProducto.Text;
-                    dgvProductos.Rows[n].Cells[3].Value = nudCantidad.Text; 
+                    MatrizProductos[fila, 0] = (fila + 1).ToString();
+                    MatrizProductos[fila, 1] = dtpFechaDeVenta.Text;
+                    MatrizProductos[fila, 2] = txtProducto.Text;
+                    MatrizProductos[fila, 3] = nudCantidad.Text;
+                    dgvProductos.Rows.Add(MatrizProductos[fila, 0], MatrizProductos[fila, 1], MatrizProductos[fila, 2], MatrizProductos[fila, 3]);
+                    fila++; 
                 }
             }
             else
@@ -52,15 +55,28 @@ namespace pryIEFIAriasExequiel
                 MessageBox.Show("Agregue un Producto.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             cboProductos.Items.Add(txtProducto.Text);
+            cboProducto.Items.Add(txtProducto.Text); 
 
         }
 
         private void cmdFiltrar_Click(object sender, EventArgs e)
         {
-            if (optCantidad.Checked) 
+            dgvProductos.Rows.Clear(); 
+            if (optProductos.Checked)
+            {
+                for (int i = 0; i < 10; i++)
+                {
+                    if (MatrizProductos[i, 2] == cboProducto.Text) 
+                    {
+                        dgvProductos.Rows.Add(MatrizProductos[fila, 0], MatrizProductos[fila, 1], MatrizProductos[fila, 2], MatrizProductos[fila, 3]);
+                    }
+                }
+            }
+            else
             {
 
             }
+
         }
     }
 }

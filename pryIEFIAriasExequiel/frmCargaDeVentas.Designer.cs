@@ -41,7 +41,7 @@
             this.mrcConsultarProductos = new System.Windows.Forms.GroupBox();
             this.mrcFiltrosDeConsultas = new System.Windows.Forms.GroupBox();
             this.cmdFiltrar = new System.Windows.Forms.Button();
-            this.txtBuscar = new System.Windows.Forms.TextBox();
+            this.txtBuscarCantidad = new System.Windows.Forms.TextBox();
             this.optCantidad = new System.Windows.Forms.RadioButton();
             this.optProductos = new System.Windows.Forms.RadioButton();
             this.dgvProductos = new System.Windows.Forms.DataGridView();
@@ -51,6 +51,7 @@
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cboProductos = new System.Windows.Forms.ComboBox();
             this.cmdVolver = new System.Windows.Forms.Button();
+            this.cboProducto = new System.Windows.Forms.ComboBox();
             this.mrcCargaDeVentas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudCantidad)).BeginInit();
             this.mrcConsultarProductos.SuspendLayout();
@@ -159,8 +160,9 @@
             // 
             // mrcFiltrosDeConsultas
             // 
+            this.mrcFiltrosDeConsultas.Controls.Add(this.cboProducto);
             this.mrcFiltrosDeConsultas.Controls.Add(this.cmdFiltrar);
-            this.mrcFiltrosDeConsultas.Controls.Add(this.txtBuscar);
+            this.mrcFiltrosDeConsultas.Controls.Add(this.txtBuscarCantidad);
             this.mrcFiltrosDeConsultas.Controls.Add(this.optCantidad);
             this.mrcFiltrosDeConsultas.Controls.Add(this.optProductos);
             this.mrcFiltrosDeConsultas.Location = new System.Drawing.Point(10, 234);
@@ -180,28 +182,28 @@
             this.cmdFiltrar.UseVisualStyleBackColor = true;
             this.cmdFiltrar.Click += new System.EventHandler(this.cmdFiltrar_Click);
             // 
-            // txtBuscar
+            // txtBuscarCantidad
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(97, 54);
-            this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(226, 21);
-            this.txtBuscar.TabIndex = 2;
+            this.txtBuscarCantidad.Location = new System.Drawing.Point(234, 54);
+            this.txtBuscarCantidad.Name = "txtBuscarCantidad";
+            this.txtBuscarCantidad.Size = new System.Drawing.Size(127, 21);
+            this.txtBuscarCantidad.TabIndex = 2;
             // 
             // optCantidad
             // 
             this.optCantidad.AutoSize = true;
-            this.optCantidad.Location = new System.Drawing.Point(248, 29);
+            this.optCantidad.Location = new System.Drawing.Point(249, 29);
             this.optCantidad.Name = "optCantidad";
             this.optCantidad.Size = new System.Drawing.Size(75, 19);
             this.optCantidad.TabIndex = 1;
-            this.optCantidad.TabStop = true;
             this.optCantidad.Text = "Cantidad";
             this.optCantidad.UseVisualStyleBackColor = true;
             // 
             // optProductos
             // 
             this.optProductos.AutoSize = true;
-            this.optProductos.Location = new System.Drawing.Point(97, 29);
+            this.optProductos.Checked = true;
+            this.optProductos.Location = new System.Drawing.Point(57, 29);
             this.optProductos.Name = "optProductos";
             this.optProductos.Size = new System.Drawing.Size(84, 19);
             this.optProductos.TabIndex = 0;
@@ -267,6 +269,14 @@
             this.cmdVolver.UseVisualStyleBackColor = true;
             this.cmdVolver.Click += new System.EventHandler(this.cmdVolver_Click);
             // 
+            // cboProducto
+            // 
+            this.cboProducto.FormattingEnabled = true;
+            this.cboProducto.Location = new System.Drawing.Point(72, 54);
+            this.cboProducto.Name = "cboProducto";
+            this.cboProducto.Size = new System.Drawing.Size(121, 23);
+            this.cboProducto.TabIndex = 4;
+            // 
             // frmCargaDeVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -316,8 +326,9 @@
         private System.Windows.Forms.Button cmdVolver;
         private System.Windows.Forms.GroupBox mrcFiltrosDeConsultas;
         private System.Windows.Forms.Button cmdFiltrar;
-        private System.Windows.Forms.TextBox txtBuscar;
+        private System.Windows.Forms.TextBox txtBuscarCantidad;
         private System.Windows.Forms.RadioButton optCantidad;
         private System.Windows.Forms.RadioButton optProductos;
+        private System.Windows.Forms.ComboBox cboProducto;
     }
 }
