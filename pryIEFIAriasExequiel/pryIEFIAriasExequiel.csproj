@@ -118,6 +118,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icono de ejecutable.ico" />
+    <None Include="Resources\imagen de fonde de pag principal.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

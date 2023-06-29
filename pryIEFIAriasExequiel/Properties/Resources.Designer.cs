@@ -79,5 +79,15 @@ namespace pryIEFIAriasExequiel.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap imagen_de_fonde_de_pag_principal {
+            get {
+                object obj = ResourceManager.GetObject("imagen de fonde de pag principal", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

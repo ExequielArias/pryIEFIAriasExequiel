@@ -32,11 +32,12 @@
             this.dgvListado = new System.Windows.Forms.DataGridView();
             this.lblListado = new System.Windows.Forms.Label();
             this.mrcFiltros = new System.Windows.Forms.GroupBox();
-            this.optProducto = new System.Windows.Forms.RadioButton();
-            this.optCantidad = new System.Windows.Forms.RadioButton();
-            this.txtBuscar = new System.Windows.Forms.TextBox();
-            this.cmdFiltrar = new System.Windows.Forms.Button();
             this.cmdVerTodo = new System.Windows.Forms.Button();
+            this.cmdFiltrar = new System.Windows.Forms.Button();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
+            this.optCantidad = new System.Windows.Forms.RadioButton();
+            this.optProducto = new System.Windows.Forms.RadioButton();
+            this.cmdVolver = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListado)).BeginInit();
             this.mrcFiltros.SuspendLayout();
             this.SuspendLayout();
@@ -74,16 +75,30 @@
             this.mrcFiltros.TabStop = false;
             this.mrcFiltros.Text = "Filtrar";
             // 
-            // optProducto
+            // cmdVerTodo
             // 
-            this.optProducto.AutoSize = true;
-            this.optProducto.Location = new System.Drawing.Point(25, 34);
-            this.optProducto.Name = "optProducto";
-            this.optProducto.Size = new System.Drawing.Size(77, 19);
-            this.optProducto.TabIndex = 0;
-            this.optProducto.TabStop = true;
-            this.optProducto.Text = "Producto";
-            this.optProducto.UseVisualStyleBackColor = true;
+            this.cmdVerTodo.Location = new System.Drawing.Point(138, 105);
+            this.cmdVerTodo.Name = "cmdVerTodo";
+            this.cmdVerTodo.Size = new System.Drawing.Size(71, 23);
+            this.cmdVerTodo.TabIndex = 4;
+            this.cmdVerTodo.Text = "Ver Todo";
+            this.cmdVerTodo.UseVisualStyleBackColor = true;
+            // 
+            // cmdFiltrar
+            // 
+            this.cmdFiltrar.Location = new System.Drawing.Point(40, 105);
+            this.cmdFiltrar.Name = "cmdFiltrar";
+            this.cmdFiltrar.Size = new System.Drawing.Size(75, 23);
+            this.cmdFiltrar.TabIndex = 3;
+            this.cmdFiltrar.Text = "Filtrar";
+            this.cmdFiltrar.UseVisualStyleBackColor = true;
+            // 
+            // txtBuscar
+            // 
+            this.txtBuscar.Location = new System.Drawing.Point(27, 68);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(193, 21);
+            this.txtBuscar.TabIndex = 2;
             // 
             // optCantidad
             // 
@@ -96,30 +111,27 @@
             this.optCantidad.Text = "Cantidad";
             this.optCantidad.UseVisualStyleBackColor = true;
             // 
-            // txtBuscar
+            // optProducto
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(27, 68);
-            this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(193, 21);
-            this.txtBuscar.TabIndex = 2;
+            this.optProducto.AutoSize = true;
+            this.optProducto.Location = new System.Drawing.Point(25, 34);
+            this.optProducto.Name = "optProducto";
+            this.optProducto.Size = new System.Drawing.Size(77, 19);
+            this.optProducto.TabIndex = 0;
+            this.optProducto.TabStop = true;
+            this.optProducto.Text = "Producto";
+            this.optProducto.UseVisualStyleBackColor = true;
             // 
-            // cmdFiltrar
+            // cmdVolver
             // 
-            this.cmdFiltrar.Location = new System.Drawing.Point(40, 105);
-            this.cmdFiltrar.Name = "cmdFiltrar";
-            this.cmdFiltrar.Size = new System.Drawing.Size(75, 23);
-            this.cmdFiltrar.TabIndex = 3;
-            this.cmdFiltrar.Text = "Filtrar";
-            this.cmdFiltrar.UseVisualStyleBackColor = true;
-            // 
-            // cmdVerTodo
-            // 
-            this.cmdVerTodo.Location = new System.Drawing.Point(138, 105);
-            this.cmdVerTodo.Name = "cmdVerTodo";
-            this.cmdVerTodo.Size = new System.Drawing.Size(71, 23);
-            this.cmdVerTodo.TabIndex = 4;
-            this.cmdVerTodo.Text = "Ver Todo";
-            this.cmdVerTodo.UseVisualStyleBackColor = true;
+            this.cmdVolver.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdVolver.Location = new System.Drawing.Point(593, 450);
+            this.cmdVolver.Name = "cmdVolver";
+            this.cmdVolver.Size = new System.Drawing.Size(75, 23);
+            this.cmdVolver.TabIndex = 3;
+            this.cmdVolver.Text = "Volver";
+            this.cmdVolver.UseVisualStyleBackColor = true;
+            this.cmdVolver.Click += new System.EventHandler(this.cmdVolver_Click);
             // 
             // frmListado
             // 
@@ -127,6 +139,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(680, 485);
+            this.Controls.Add(this.cmdVolver);
             this.Controls.Add(this.mrcFiltros);
             this.Controls.Add(this.lblListado);
             this.Controls.Add(this.dgvListado);
@@ -151,5 +164,6 @@
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.RadioButton optCantidad;
         private System.Windows.Forms.RadioButton optProducto;
+        private System.Windows.Forms.Button cmdVolver;
     }
 }

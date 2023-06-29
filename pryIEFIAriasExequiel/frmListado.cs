@@ -16,5 +16,12 @@ namespace pryIEFIAriasExequiel
         {
             InitializeComponent();
         }
+
+        private void cmdVolver_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmPrincipal principal = new frmPrincipal();
+            principal.ShowDialog(); 
+        }
     }
 }

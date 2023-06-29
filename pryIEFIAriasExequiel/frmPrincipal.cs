@@ -31,5 +31,12 @@ namespace pryIEFIAriasExequiel
             frmCargaDeVentas CargaDeVentas = new frmCargaDeVentas();
             CargaDeVentas.ShowDialog();
         }
+
+        private void cmdListado_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmListado listado = new frmListado();
+            listado.ShowDialog();
+        }
     }
 }
