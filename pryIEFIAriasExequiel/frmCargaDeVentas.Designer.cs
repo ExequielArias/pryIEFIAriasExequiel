@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCargaDeVentas));
             this.lblVentas = new System.Windows.Forms.Label();
             this.mrcCargaDeVentas = new System.Windows.Forms.GroupBox();
             this.nudCantidad = new System.Windows.Forms.NumericUpDown();
@@ -275,6 +276,7 @@
             this.Controls.Add(this.mrcConsultarProductos);
             this.Controls.Add(this.mrcCargaDeVentas);
             this.Controls.Add(this.lblVentas);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "frmCargaDeVentas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
