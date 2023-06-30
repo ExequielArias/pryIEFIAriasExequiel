@@ -280,6 +280,7 @@
             // 
             // cmdListado
             // 
+            this.cmdListado.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdListado.Location = new System.Drawing.Point(308, 628);
             this.cmdListado.Name = "cmdListado";
             this.cmdListado.Size = new System.Drawing.Size(75, 23);

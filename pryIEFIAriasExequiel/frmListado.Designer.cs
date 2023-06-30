@@ -79,16 +79,16 @@
             this.mrcFiltros.Controls.Add(this.optCantidad);
             this.mrcFiltros.Controls.Add(this.optProducto);
             this.mrcFiltros.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mrcFiltros.Location = new System.Drawing.Point(226, 326);
+            this.mrcFiltros.Location = new System.Drawing.Point(163, 326);
             this.mrcFiltros.Name = "mrcFiltros";
-            this.mrcFiltros.Size = new System.Drawing.Size(240, 147);
+            this.mrcFiltros.Size = new System.Drawing.Size(303, 147);
             this.mrcFiltros.TabIndex = 2;
             this.mrcFiltros.TabStop = false;
             this.mrcFiltros.Text = "Filtrar";
             // 
             // cmdVerTodo
             // 
-            this.cmdVerTodo.Location = new System.Drawing.Point(138, 105);
+            this.cmdVerTodo.Location = new System.Drawing.Point(178, 105);
             this.cmdVerTodo.Name = "cmdVerTodo";
             this.cmdVerTodo.Size = new System.Drawing.Size(71, 23);
             this.cmdVerTodo.TabIndex = 4;
@@ -98,7 +98,7 @@
             // 
             // cmdFiltrar
             // 
-            this.cmdFiltrar.Location = new System.Drawing.Point(40, 105);
+            this.cmdFiltrar.Location = new System.Drawing.Point(68, 105);
             this.cmdFiltrar.Name = "cmdFiltrar";
             this.cmdFiltrar.Size = new System.Drawing.Size(75, 23);
             this.cmdFiltrar.TabIndex = 3;
@@ -108,15 +108,15 @@
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(138, 57);
+            this.txtBuscar.Location = new System.Drawing.Point(174, 57);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(83, 21);
+            this.txtBuscar.Size = new System.Drawing.Size(123, 21);
             this.txtBuscar.TabIndex = 2;
             // 
             // optCantidad
             // 
             this.optCantidad.AutoSize = true;
-            this.optCantidad.Location = new System.Drawing.Point(134, 34);
+            this.optCantidad.Location = new System.Drawing.Point(174, 34);
             this.optCantidad.Name = "optCantidad";
             this.optCantidad.Size = new System.Drawing.Size(75, 19);
             this.optCantidad.TabIndex = 1;
@@ -149,34 +149,34 @@
             // cboFiltroProducto
             // 
             this.cboFiltroProducto.FormattingEnabled = true;
-            this.cboFiltroProducto.Location = new System.Drawing.Point(40, 57);
+            this.cboFiltroProducto.Location = new System.Drawing.Point(25, 57);
             this.cboFiltroProducto.Name = "cboFiltroProducto";
-            this.cboFiltroProducto.Size = new System.Drawing.Size(75, 23);
+            this.cboFiltroProducto.Size = new System.Drawing.Size(128, 23);
             this.cboFiltroProducto.TabIndex = 5;
             // 
             // ID
             // 
             this.ID.HeaderText = "ID";
             this.ID.Name = "ID";
-            this.ID.Width = 125;
+            this.ID.Width = 150;
             // 
             // Fecha
             // 
             this.Fecha.HeaderText = "Fecha";
             this.Fecha.Name = "Fecha";
-            this.Fecha.Width = 125;
+            this.Fecha.Width = 150;
             // 
             // Producto
             // 
             this.Producto.HeaderText = "Producto";
             this.Producto.Name = "Producto";
-            this.Producto.Width = 125;
+            this.Producto.Width = 170;
             // 
             // Cantidad
             // 
             this.Cantidad.HeaderText = "Cantidad";
             this.Cantidad.Name = "Cantidad";
-            this.Cantidad.Width = 125;
+            this.Cantidad.Width = 150;
             // 
             // frmListado
             // 
@@ -211,10 +211,10 @@
         private System.Windows.Forms.RadioButton optCantidad;
         private System.Windows.Forms.RadioButton optProducto;
         private System.Windows.Forms.Button cmdVolver;
+        private System.Windows.Forms.ComboBox cboFiltroProducto;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn Producto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
-        private System.Windows.Forms.ComboBox cboFiltroProducto;
     }
 }
