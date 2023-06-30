@@ -12,7 +12,10 @@ namespace pryIEFIAriasExequiel
 {
     public partial class frmCargaDeProductos : Form
     {
-        
+        string[,] MatrizProductos = new string[10, 4];
+        int fila = 0;
+        frmListado Listado = new frmListado(); 
+
         public frmCargaDeProductos()
         {
             InitializeComponent();
@@ -45,6 +48,10 @@ namespace pryIEFIAriasExequiel
                     dgvConsultas.Rows[n].Cells[0].Value = "";  
                     dgvConsultas.Rows[n].Cells[1].Value = txtProducto.Text;
                     dgvConsultas.Rows[n].Cells[2].Value = dtpFecha.Text;
+                    Listado.MatrizProductos[fila, 0] = (fila + 1).ToString();
+                    Listado.MatrizProductos[fila, 1] = dtpFecha.Text;
+                    Listado.MatrizProductos[fila, 2] = txtProducto.Text;
+                    fila++;
                 }
             }
             else
@@ -62,6 +69,16 @@ namespace pryIEFIAriasExequiel
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void cmdListado_Click(object sender, EventArgs e)
+        {
+            Listado.ShowDialog(); 
+        }
+
+        private void cmdBorraTodo_Click(object sender, EventArgs e)
+        {
+            dgvConsultas.Rows.Clear(); 
         }
     }
 }

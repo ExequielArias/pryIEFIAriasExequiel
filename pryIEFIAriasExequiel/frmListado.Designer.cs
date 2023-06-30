@@ -30,19 +30,20 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmListado));
             this.dgvListado = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblListado = new System.Windows.Forms.Label();
             this.mrcFiltros = new System.Windows.Forms.GroupBox();
+            this.cboFiltroProducto = new System.Windows.Forms.ComboBox();
             this.cmdVerTodo = new System.Windows.Forms.Button();
             this.cmdFiltrar = new System.Windows.Forms.Button();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.optCantidad = new System.Windows.Forms.RadioButton();
             this.optProducto = new System.Windows.Forms.RadioButton();
             this.cmdVolver = new System.Windows.Forms.Button();
-            this.cboFiltroProducto = new System.Windows.Forms.ComboBox();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cmdBorrar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListado)).BeginInit();
             this.mrcFiltros.SuspendLayout();
             this.SuspendLayout();
@@ -59,6 +60,30 @@
             this.dgvListado.Name = "dgvListado";
             this.dgvListado.Size = new System.Drawing.Size(656, 273);
             this.dgvListado.TabIndex = 0;
+            // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.Width = 150;
+            // 
+            // Fecha
+            // 
+            this.Fecha.HeaderText = "Fecha";
+            this.Fecha.Name = "Fecha";
+            this.Fecha.Width = 150;
+            // 
+            // Producto
+            // 
+            this.Producto.HeaderText = "Producto";
+            this.Producto.Name = "Producto";
+            this.Producto.Width = 170;
+            // 
+            // Cantidad
+            // 
+            this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.Name = "Cantidad";
+            this.Cantidad.Width = 150;
             // 
             // lblListado
             // 
@@ -85,6 +110,15 @@
             this.mrcFiltros.TabIndex = 2;
             this.mrcFiltros.TabStop = false;
             this.mrcFiltros.Text = "Filtrar";
+            // 
+            // cboFiltroProducto
+            // 
+            this.cboFiltroProducto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboFiltroProducto.FormattingEnabled = true;
+            this.cboFiltroProducto.Location = new System.Drawing.Point(25, 57);
+            this.cboFiltroProducto.Name = "cboFiltroProducto";
+            this.cboFiltroProducto.Size = new System.Drawing.Size(128, 23);
+            this.cboFiltroProducto.TabIndex = 5;
             // 
             // cmdVerTodo
             // 
@@ -146,38 +180,16 @@
             this.cmdVolver.UseVisualStyleBackColor = true;
             this.cmdVolver.Click += new System.EventHandler(this.cmdVolver_Click);
             // 
-            // cboFiltroProducto
+            // cmdBorrar
             // 
-            this.cboFiltroProducto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboFiltroProducto.FormattingEnabled = true;
-            this.cboFiltroProducto.Location = new System.Drawing.Point(25, 57);
-            this.cboFiltroProducto.Name = "cboFiltroProducto";
-            this.cboFiltroProducto.Size = new System.Drawing.Size(128, 23);
-            this.cboFiltroProducto.TabIndex = 5;
-            // 
-            // ID
-            // 
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.Width = 150;
-            // 
-            // Fecha
-            // 
-            this.Fecha.HeaderText = "Fecha";
-            this.Fecha.Name = "Fecha";
-            this.Fecha.Width = 150;
-            // 
-            // Producto
-            // 
-            this.Producto.HeaderText = "Producto";
-            this.Producto.Name = "Producto";
-            this.Producto.Width = 170;
-            // 
-            // Cantidad
-            // 
-            this.Cantidad.HeaderText = "Cantidad";
-            this.Cantidad.Name = "Cantidad";
-            this.Cantidad.Width = 150;
+            this.cmdBorrar.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdBorrar.Location = new System.Drawing.Point(512, 450);
+            this.cmdBorrar.Name = "cmdBorrar";
+            this.cmdBorrar.Size = new System.Drawing.Size(75, 23);
+            this.cmdBorrar.TabIndex = 4;
+            this.cmdBorrar.Text = "Borrar";
+            this.cmdBorrar.UseVisualStyleBackColor = true;
+            this.cmdBorrar.Click += new System.EventHandler(this.cmdBorrar_Click);
             // 
             // frmListado
             // 
@@ -185,12 +197,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(680, 485);
+            this.Controls.Add(this.cmdBorrar);
             this.Controls.Add(this.cmdVolver);
             this.Controls.Add(this.mrcFiltros);
             this.Controls.Add(this.lblListado);
             this.Controls.Add(this.dgvListado);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(696, 524);
+            this.MinimumSize = new System.Drawing.Size(696, 524);
             this.Name = "frmListado";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Listado";
             this.Load += new System.EventHandler(this.frmListado_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListado)).EndInit();
@@ -217,5 +233,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn Producto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
+        private System.Windows.Forms.Button cmdBorrar;
     }
 }

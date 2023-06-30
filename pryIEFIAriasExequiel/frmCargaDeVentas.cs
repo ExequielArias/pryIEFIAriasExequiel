@@ -95,5 +95,10 @@ namespace pryIEFIAriasExequiel
         {
             Listado.ShowDialog(); 
         }
+
+        private void cmdBorraTodo_Click(object sender, EventArgs e)
+        {
+            dgvProductos.Rows.Clear(); 
+        }
     }
 }

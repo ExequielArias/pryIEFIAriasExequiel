@@ -76,5 +76,10 @@ namespace pryIEFIAriasExequiel
             }
 
         }
+
+        private void cmdBorrar_Click(object sender, EventArgs e)
+        {
+            dgvListado.Rows.Clear(); 
+        }
     }
 }

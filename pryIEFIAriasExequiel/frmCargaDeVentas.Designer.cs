@@ -40,6 +40,7 @@
             this.lblProducto = new System.Windows.Forms.Label();
             this.mrcConsultarProductos = new System.Windows.Forms.GroupBox();
             this.mrcFiltrosDeConsultas = new System.Windows.Forms.GroupBox();
+            this.cboFiltroProducto = new System.Windows.Forms.ComboBox();
             this.cmdFiltrar = new System.Windows.Forms.Button();
             this.txtBuscarCantidad = new System.Windows.Forms.TextBox();
             this.optCantidad = new System.Windows.Forms.RadioButton();
@@ -51,8 +52,8 @@
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cboProductos = new System.Windows.Forms.ComboBox();
             this.cmdVolver = new System.Windows.Forms.Button();
-            this.cboFiltroProducto = new System.Windows.Forms.ComboBox();
             this.cmdListado = new System.Windows.Forms.Button();
+            this.cmdBorraTodo = new System.Windows.Forms.Button();
             this.mrcCargaDeVentas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudCantidad)).BeginInit();
             this.mrcConsultarProductos.SuspendLayout();
@@ -173,6 +174,14 @@
             this.mrcFiltrosDeConsultas.TabStop = false;
             this.mrcFiltrosDeConsultas.Text = "Filtros De Consultas";
             // 
+            // cboFiltroProducto
+            // 
+            this.cboFiltroProducto.FormattingEnabled = true;
+            this.cboFiltroProducto.Location = new System.Drawing.Point(72, 54);
+            this.cboFiltroProducto.Name = "cboFiltroProducto";
+            this.cboFiltroProducto.Size = new System.Drawing.Size(121, 23);
+            this.cboFiltroProducto.TabIndex = 4;
+            // 
             // cmdFiltrar
             // 
             this.cmdFiltrar.Location = new System.Drawing.Point(175, 94);
@@ -262,7 +271,7 @@
             // cmdVolver
             // 
             this.cmdVolver.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdVolver.Location = new System.Drawing.Point(399, 628);
+            this.cmdVolver.Location = new System.Drawing.Point(318, 628);
             this.cmdVolver.Name = "cmdVolver";
             this.cmdVolver.Size = new System.Drawing.Size(75, 23);
             this.cmdVolver.TabIndex = 3;
@@ -270,18 +279,10 @@
             this.cmdVolver.UseVisualStyleBackColor = true;
             this.cmdVolver.Click += new System.EventHandler(this.cmdVolver_Click);
             // 
-            // cboFiltroProducto
-            // 
-            this.cboFiltroProducto.FormattingEnabled = true;
-            this.cboFiltroProducto.Location = new System.Drawing.Point(72, 54);
-            this.cboFiltroProducto.Name = "cboFiltroProducto";
-            this.cboFiltroProducto.Size = new System.Drawing.Size(121, 23);
-            this.cboFiltroProducto.TabIndex = 4;
-            // 
             // cmdListado
             // 
             this.cmdListado.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdListado.Location = new System.Drawing.Point(308, 628);
+            this.cmdListado.Location = new System.Drawing.Point(399, 628);
             this.cmdListado.Name = "cmdListado";
             this.cmdListado.Size = new System.Drawing.Size(75, 23);
             this.cmdListado.TabIndex = 4;
@@ -289,12 +290,24 @@
             this.cmdListado.UseVisualStyleBackColor = true;
             this.cmdListado.Click += new System.EventHandler(this.cmdListado_Click);
             // 
+            // cmdBorraTodo
+            // 
+            this.cmdBorraTodo.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdBorraTodo.Location = new System.Drawing.Point(12, 628);
+            this.cmdBorraTodo.Name = "cmdBorraTodo";
+            this.cmdBorraTodo.Size = new System.Drawing.Size(101, 23);
+            this.cmdBorraTodo.TabIndex = 5;
+            this.cmdBorraTodo.Text = "Borrar Todo";
+            this.cmdBorraTodo.UseVisualStyleBackColor = true;
+            this.cmdBorraTodo.Click += new System.EventHandler(this.cmdBorraTodo_Click);
+            // 
             // frmCargaDeVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(487, 663);
+            this.Controls.Add(this.cmdBorraTodo);
             this.Controls.Add(this.cmdListado);
             this.Controls.Add(this.cmdVolver);
             this.Controls.Add(this.mrcConsultarProductos);
@@ -302,6 +315,8 @@
             this.Controls.Add(this.lblVentas);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(503, 702);
+            this.MinimumSize = new System.Drawing.Size(503, 702);
             this.Name = "frmCargaDeVentas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ventas";
@@ -344,5 +359,6 @@
         private System.Windows.Forms.RadioButton optProductos;
         private System.Windows.Forms.ComboBox cboFiltroProducto;
         private System.Windows.Forms.Button cmdListado;
+        private System.Windows.Forms.Button cmdBorraTodo;
     }
 }

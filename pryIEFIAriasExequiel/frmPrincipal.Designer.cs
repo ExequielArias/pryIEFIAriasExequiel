@@ -126,6 +126,8 @@
             this.Controls.Add(this.cmdProductos);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(255, 263);
+            this.MinimumSize = new System.Drawing.Size(255, 263);
             this.Name = "frmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu Principal";

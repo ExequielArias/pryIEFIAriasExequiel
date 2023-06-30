@@ -38,11 +38,13 @@
             this.txtProducto = new System.Windows.Forms.TextBox();
             this.lblProducto = new System.Windows.Forms.Label();
             this.mrcConsultaDeProductos = new System.Windows.Forms.GroupBox();
-            this.cboConsultas = new System.Windows.Forms.ComboBox();
             this.dgvConsultas = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cboConsultas = new System.Windows.Forms.ComboBox();
+            this.cmdListado = new System.Windows.Forms.Button();
+            this.cmdBorraTodo = new System.Windows.Forms.Button();
             this.mrcCargaDeProductos.SuspendLayout();
             this.mrcConsultaDeProductos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsultas)).BeginInit();
@@ -51,7 +53,7 @@
             // cmdVolver
             // 
             this.cmdVolver.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdVolver.Location = new System.Drawing.Point(263, 390);
+            this.cmdVolver.Location = new System.Drawing.Point(147, 388);
             this.cmdVolver.Name = "cmdVolver";
             this.cmdVolver.Size = new System.Drawing.Size(110, 27);
             this.cmdVolver.TabIndex = 0;
@@ -140,15 +142,6 @@
             this.mrcConsultaDeProductos.TabStop = false;
             this.mrcConsultaDeProductos.Text = "Consulta De Productos";
             // 
-            // cboConsultas
-            // 
-            this.cboConsultas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboConsultas.FormattingEnabled = true;
-            this.cboConsultas.Location = new System.Drawing.Point(46, 20);
-            this.cboConsultas.Name = "cboConsultas";
-            this.cboConsultas.Size = new System.Drawing.Size(277, 23);
-            this.cboConsultas.TabIndex = 0;
-            // 
             // dgvConsultas
             // 
             this.dgvConsultas.AllowUserToDeleteRows = false;
@@ -160,7 +153,7 @@
             this.dgvConsultas.Location = new System.Drawing.Point(6, 49);
             this.dgvConsultas.Name = "dgvConsultas";
             this.dgvConsultas.ReadOnly = true;
-            this.dgvConsultas.Size = new System.Drawing.Size(339, 126);
+            this.dgvConsultas.Size = new System.Drawing.Size(349, 126);
             this.dgvConsultas.TabIndex = 1;
             this.dgvConsultas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -182,18 +175,53 @@
             this.Fecha.Name = "Fecha";
             this.Fecha.ReadOnly = true;
             // 
+            // cboConsultas
+            // 
+            this.cboConsultas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboConsultas.FormattingEnabled = true;
+            this.cboConsultas.Location = new System.Drawing.Point(46, 20);
+            this.cboConsultas.Name = "cboConsultas";
+            this.cboConsultas.Size = new System.Drawing.Size(277, 23);
+            this.cboConsultas.TabIndex = 0;
+            // 
+            // cmdListado
+            // 
+            this.cmdListado.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdListado.Location = new System.Drawing.Point(263, 388);
+            this.cmdListado.Name = "cmdListado";
+            this.cmdListado.Size = new System.Drawing.Size(110, 27);
+            this.cmdListado.TabIndex = 4;
+            this.cmdListado.Text = "Listado";
+            this.cmdListado.UseVisualStyleBackColor = true;
+            this.cmdListado.Click += new System.EventHandler(this.cmdListado_Click);
+            // 
+            // cmdBorraTodo
+            // 
+            this.cmdBorraTodo.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdBorraTodo.Location = new System.Drawing.Point(12, 388);
+            this.cmdBorraTodo.Name = "cmdBorraTodo";
+            this.cmdBorraTodo.Size = new System.Drawing.Size(101, 27);
+            this.cmdBorraTodo.TabIndex = 6;
+            this.cmdBorraTodo.Text = "Borrar Todo";
+            this.cmdBorraTodo.UseVisualStyleBackColor = true;
+            this.cmdBorraTodo.Click += new System.EventHandler(this.cmdBorraTodo_Click);
+            // 
             // frmCargaDeProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(390, 438);
+            this.Controls.Add(this.cmdBorraTodo);
+            this.Controls.Add(this.cmdListado);
             this.Controls.Add(this.mrcConsultaDeProductos);
             this.Controls.Add(this.mrcCargaDeProductos);
             this.Controls.Add(this.lblProductos);
             this.Controls.Add(this.cmdVolver);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(406, 477);
+            this.MinimumSize = new System.Drawing.Size(406, 477);
             this.Name = "frmCargaDeProductos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Productos";
@@ -223,5 +251,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Producto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
+        private System.Windows.Forms.Button cmdListado;
+        private System.Windows.Forms.Button cmdBorraTodo;
     }
 }
