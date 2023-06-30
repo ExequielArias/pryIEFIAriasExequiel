@@ -148,6 +148,7 @@
             // 
             // cboFiltroProducto
             // 
+            this.cboFiltroProducto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboFiltroProducto.FormattingEnabled = true;
             this.cboFiltroProducto.Location = new System.Drawing.Point(25, 57);
             this.cboFiltroProducto.Name = "cboFiltroProducto";
