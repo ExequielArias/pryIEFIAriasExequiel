@@ -122,9 +122,9 @@
             // 
             // cmdVerTodo
             // 
-            this.cmdVerTodo.Location = new System.Drawing.Point(178, 105);
+            this.cmdVerTodo.Location = new System.Drawing.Point(120, 115);
             this.cmdVerTodo.Name = "cmdVerTodo";
-            this.cmdVerTodo.Size = new System.Drawing.Size(71, 23);
+            this.cmdVerTodo.Size = new System.Drawing.Size(75, 23);
             this.cmdVerTodo.TabIndex = 4;
             this.cmdVerTodo.Text = "Ver Todo";
             this.cmdVerTodo.UseVisualStyleBackColor = true;
@@ -132,7 +132,7 @@
             // 
             // cmdFiltrar
             // 
-            this.cmdFiltrar.Location = new System.Drawing.Point(68, 105);
+            this.cmdFiltrar.Location = new System.Drawing.Point(120, 86);
             this.cmdFiltrar.Name = "cmdFiltrar";
             this.cmdFiltrar.Size = new System.Drawing.Size(75, 23);
             this.cmdFiltrar.TabIndex = 3;
